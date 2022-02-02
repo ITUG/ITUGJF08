@@ -1,5 +1,5 @@
 # ITUG JourFixe #08
-## Titel
+## Vis-à-vis: Zweisprachige Editionen mit TUSTEP (Urs Leo Gantenbein)
 
 ## Beschreibung
 
