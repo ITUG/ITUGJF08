@@ -14,4 +14,11 @@ Die gegenüberliegenden Seiten sollen sich dabei entsprechen, das heißt, die er
 Schließlich werden in der *zweiten Phase* die beiden Texte, die nun wie Schloss und Schlüsselloch zusammenpassen, übereinandergelegt, was zum gewünschten Resultat führt:
 
 ![vav3](https://user-images.githubusercontent.com/101052082/159174066-4a8d24db-cadd-4683-9f02-5d7c86d029f2.jpg)
+  
+  
+### 2. Erste Phase 
+In der ersten Phase werden an passenden Stellen der beiden Texte Leerseiten eingefügt. Die ersten bzw. letzten Zeilen der gegenüberliegenden Seiten sollen sich inhaltlich entsprechen. Um dies zu erreichen, müssen die Seitenumbrüche in der Regel manuell gesetzt werden. Jedem Seitenumbruch soll eine Leerseite folgen, damit die Texte in Phase 2 zusammengesetzt werden können. Die Titelseite bildet die erste Seite des linksseitigen Texts **seneca1.tf**.
+
+Dem rechtsseitigen Text **seneca2.tf** werden zuvor zwei Leerseiten vorangestellt, was mit folgender Steueranweisung erzielt werden kann:  
+**&lt;np2/&gt;&&&+2&&&{** 
 
