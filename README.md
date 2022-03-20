@@ -19,6 +19,6 @@ Schließlich werden in der *zweiten Phase* die beiden Texte, die nun wie Schloss
 ### 2. Erste Phase 
 In der ersten Phase werden an passenden Stellen der beiden Texte Leerseiten eingefügt. Die ersten bzw. letzten Zeilen der gegenüberliegenden Seiten sollen sich inhaltlich entsprechen. Um dies zu erreichen, müssen die Seitenumbrüche in der Regel manuell gesetzt werden. Jedem Seitenumbruch soll eine Leerseite folgen, damit die Texte in Phase 2 zusammengesetzt werden können. Die Titelseite bildet die erste Seite des linksseitigen Texts **seneca1.tf**.
 
-Dem rechtsseitigen Text **seneca2.tf** werden zuvor zwei Leerseiten vorangestellt, was mit folgender Steueranweisung erzielt werden kann:  
-**&lt;np2/&gt;&&&+2&&&{** 
+Dem rechtsseitigen Text **seneca2.tf** werden zuvor zwei Leerseiten vorangestellt, was mit folgender Steueranweisung (bzw. mit einem dafür definierten Makro) erzielt werden kann:  
+&lt;np2/&gt;&&&+2&&&{
 
