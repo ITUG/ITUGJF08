@@ -68,9 +68,9 @@ Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will
  
 Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalt in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
   
-SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11  -2 
+`SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11  -2` 
 
-Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe die Datei **setze_par_s1.tf** eingeführt, die mit **setze_par.tf** identisch ist bis auf den Parameter SEI, der dort wie folgt lautet: 
+Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe ich die Datei **setze_par_s1.tf** eingeführt, die mit **setze_par.tf** identisch ist bis auf den Parameter SEI, der dort wie folgt lautet: 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1  -2 
  
