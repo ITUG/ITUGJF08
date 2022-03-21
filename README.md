@@ -59,7 +59,7 @@ Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **
 <br>
 <br>
 ### Wiederverwendbarkeit der Makrodateien &quot;setze1&quot; und &quot;setze2&quot;
-Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann so vorgegangen werden, wie in **setze1** und **setze2** exemplarisch ausgeführt. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `root = "seneca"`. Alle anderen Dateinamen werden dann mit der Funktion CONCAT zu TUSCRIPT-Variablen zusammengesetzt, die den Wurzelnamen enthalten. Diese werden mit DEFINE in TUSTEP-Variablen umgewandelt, damit sie so in die Satzroutinen eingesetzt werden können, zum Beispiel wie folgt für die Ausgangsdateien **seneca1.tf** und **seneca2.tf**: 
+Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann so vorgegangen werden, wie in **setze1** und **setze2** exemplarisch ausgeführt. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `$$ root = "seneca"`. Alle anderen Dateinamen werden dann mit der Funktion CONCAT zu TUSCRIPT-Variablen zusammengesetzt, die den Wurzelnamen enthalten. Diese werden mit DEFINE in TUSTEP-Variablen umgewandelt, damit sie so in die Satzroutinen eingesetzt werden können, zum Beispiel wie folgt für die Ausgangsdateien **seneca1.tf** und **seneca2.tf**: 
  
 `$$ QUELLE1 = CONCAT(root,"1.tf")` <br>
 `$$ DEFINE QUELLE1` <br>
