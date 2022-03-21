@@ -59,9 +59,19 @@ Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **
 <br>
 <br>
 ### Wiederverwendbarkeit der Makrodateien &quot;setze1&quot; und &quot;setze2&quot;
-Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann wie in **setze1** und **setze2** vorgegangen werden. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `root = "seneca"`. Alle anderen Dateinamen dann mit der Funktion CONCAT zu TUSCRIPT-Variablen zusammengesetzt. Diese können mit DEFINE in TUSTEP-Variablen umgewandelt werden, damit sie so in die Satzroutinen eingesetzt werden können, zum Beispiel wie folgt für die Ausgangsdateien **seneca1.tf** und **seneca2.tf**: 
+Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann wie in **setze1** und **setze2** vorgegangen werden. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `root = "seneca"`. Alle anderen Dateinamen dann mit der Funktion CONCAT zu TUSCRIPT-Variablen zusammengesetzt. Diese werden mit DEFINE in TUSTEP-Variablen umgewandelt, damit sie so in die Satzroutinen eingesetzt werden können, zum Beispiel wie folgt für die Ausgangsdateien **seneca1.tf** und **seneca2.tf**: 
  
 `QUELLE1 = CONCAT(root,"1.tf")` <br>
 `DEFINE QUELLE1` <br>
 `QUELLE2 = CONCAT(root,"2.tf")` <br>
 `DEFINE QUELLE2` <br>
+ 
+Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalt in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
+  
+SEI       11  -2 
+
+Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe die Datei **setze_par_s1.tf** eingeführt, die mit **setze_par.tf** identisch ist bis auf den Parameter SEI, der dort wie folgt lautet: 
+  
+SEI       s1  -2 
+ 
+Diese s1 ist kein eigentlicher Parameter, sondern ein Stellvertreterzeichen, für noch einzusetzende aktelle erste Seitenzahl.
