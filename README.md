@@ -58,4 +58,5 @@ Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **
 \[Bemerkung: In der ersten, im Jour-fixe vorgestellten Version von **setze2** erzeugte ich mit #\*PSAUS die Ghostscriptdateien **seneca1.ps** und **seneca2.ps**, aus denen ich mittels #\*PSAUSWAHL die einzelnen Seiten extrahierte und dann über eine Schleife mit #\*PSMONT zum Endresultat zusammensetzte. Dank dem Hinweis von Hannelore und Wilhelm Ott auf #\*MONT, das direkt mit den Satzdateien arbeitet, geht das Zusammensetzen viel schneller und eleganter.\]
 <br>
 <br>
-### Wiederverwendbarkeit der Makrodateien &quot;setze1&quot; und &quot;setze1&quot;
+### Wiederverwendbarkeit der Makrodateien &quot;setze1&quot; und &quot;setze2&quot;
+Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann wie in **setze1** und **setze2** vorgegangen werden. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `root = 'seneca'`.
