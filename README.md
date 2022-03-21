@@ -41,9 +41,11 @@ Folgende Steueranweisungen fügen einen Seitenumbruch zur nächsten linken oder 
     <td>&lt;npar/&gt;&&r&&{</td>
     <td>Seitenumbruch zur nächsten rechten Seite innerhalb eines Textabschnitts</td>
 </tr> 
-</table>
-<br><br>
+</table>  
+<br>
+  
 Die Makrodatei **setze1** enthält die Satzroutinen für die beiden Dateien **seneca1.tf** und **seneca2.tf**, die im Wesentlichen den Beispielroutinen für Texte mit Apparaten im Tustep-Wiki entsprechen. Die Parameter und die Makrodefintionen für die Satzroutinen sind in den Dateien **setze_par.tf** und **setze_mak.tf** enthalten. Wie weiter unten noch erklärt wird, enthält die Parameterdatei **setze_par_s1.tf** eine Variable für die erste Seitenzahl s1, in die am Anfang der aktuell beabsichtigte Wert eingesetzt wird.  
 
+ 
 Die *Phase 1* benötigt in der Regel mehrere Satzgänge. Nach dem ersten Ausführen von **setze1** werden die 2. und die 3. Seite verglichen und die Seitenumbrüche mit den obigen Makros inhaltlich passend gesetzt. Dann wird **setze1** ein zweites Mal ausgeführt, das Resultat überprüft und es werden die Seitenumbrüche für die 4. und 5. Seite angebracht. Wieder wird **setze1** angewendet und so weiter bis zum Ende des Texts. Nach dem Setzen aller Seitenumbrüche sind **seneca1.tf** und **seneca2.tf** in der *Phase 2* bereit zur Montage mit **setze2**.
 
