@@ -69,12 +69,11 @@ Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will
 Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalt in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11  -2 
-`SEI       11 -2` 
 
 Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe ich die Datei **setze_par_s1.tf** eingeführt, die mit **setze_par.tf** identisch ist bis auf den Parameter SEI, der dort wie folgt lautet: 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1  -2 
  
-Dieses &quot;s1&quot; stellt keinen eigentlichen Parameter dann, sondern ein Stellvertreterzeichen für die noch einzusetzende aktuelle erste Seitenzahl. Die Einsetzung geschieht wie folgt, indem die Datei `PARA0 = "setze_par_s1.tf"` mit OPEN geöffnet und mit CREATE eine leere Datei `PARA = "setze_par.tf"` erzeugt wird. Der Inhalt von `PARA0` wird in eine Datei text ausgelesen, die über einen LOOP satzweise nach den Vorkommen von &quot;s1&quot; durchsucht und im positiven Fall durch den aktuellen Wert, in unserem Beispiel 11, ersetzt wird. Das Resultat wird in der Parameterdatei `PARA` abgespeichert, die dann für den Satzvorgang verwendet wird. 
+Dieses &quot;s1&quot; stellt keinen eigentlichen Parameter dann, sondern ist ein Stellvertreterzeichen für die noch einzusetzende aktuelle erste Seitenzahl. Die Einsetzung geschieht wie folgt, indem die Datei `PARA0 = "setze_par_s1.tf"` mit OPEN geöffnet und mit CREATE eine leere Datei `PARA = "setze_par.tf"` erzeugt wird. Der Inhalt von `PARA0` wird in eine Datei text ausgelesen, die über einen LOOP satzweise nach den Vorkommen von &quot;s1&quot; durchsucht und im positiven Fall durch den aktuellen Wert, in unserem Beispiel 11, ersetzt wird. Das Resultat wird in der Parameterdatei `PARA` abgespeichert, die dann für den Satzvorgang verwendet wird. 
  
 In meiner Edition verwende ich für jedes Kapitel eine eigene TUE-Makrodatei, in der ich lediglich die Werte für **root** und **s1** und eventuell noch die Seitenanzahl festlegen muss. Natürlich könnte man auch eine Makrodatei mit Parametern definieren, doch dann müssten diese bei jedem Aufruf explizit angegeben werden. Ich finde die Verwendung von fixen Makrodateien praktischer. Am Schluss kann das fertige Buch mit #\*MONT zusammengesetzt werden.
