@@ -7,7 +7,7 @@ Zwei Texte sollen auf gegenüberliegenden Seiten mit #SATZ gesetzt werden, zum B
 
 ![vav1](https://user-images.githubusercontent.com/101052082/159179569-1f17e815-365e-40bb-b6bf-1be1590fe4ae.jpg)
 
-Die gegenüberliegenden Seiten sollen sich dabei entsprechen, das heißt, die ersten und die letzten Zeilen der Seiten sollen inhaltlich ungefähr übereinstimmen. Die Idee besteht darin, zunächst in einer *ersten Phase* an den passenden Schnittstellen eine Leerseite einzufügen:
+Die gegenüberliegenden Seiten sollen sich dabei entsprechen, das heißt, die ersten und die letzten Zeilen der Seiten sollen inhaltlich ungefähr übereinstimmen. Die Idee besteht darin, zunächst in einer *ersten Phase* an den passenden Schnittstellen Leerseiten einzufügen:
 
 ![vav2](https://user-images.githubusercontent.com/101052082/159173745-a3feb20e-29f9-4ac3-9393-520d87b84126.jpg)
 
