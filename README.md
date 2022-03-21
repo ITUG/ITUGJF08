@@ -16,7 +16,7 @@ Schließlich werden in der *zweiten Phase* die beiden Texte, die nun wie Schloss
 ![vav3](https://user-images.githubusercontent.com/101052082/159174066-4a8d24db-cadd-4683-9f02-5d7c86d029f2.jpg)
 <br>
 <br>
-### Phase 1: Einfügen von Seitenumbrüchen und Leerseiten mit der TUE- bzw. Makrodatei Setze1
+### Phase 1: Einfügen von Seitenumbrüchen und Leerseiten mit der TUE- bzw. Makrodatei &quot;setze1&quot;
 In der ersten Phase werden an passenden Stellen der beiden Texte Leerseiten eingefügt. Die ersten bzw. letzten Zeilen der gegenüberliegenden Seiten sollen sich inhaltlich entsprechen. Um dies zu erreichen, müssen die Seitenumbrüche in der Regel manuell gesetzt werden. Jedem Seitenumbruch soll eine Leerseite folgen, damit die Texte in Phase 2 zusammengesetzt werden können. Die Titelseite bildet die erste Seite des linksseitigen Texts **seneca1.tf**.
 
 Dem rechtsseitigen Text **seneca2.tf** werden zuvor zwei Leerseiten vorangestellt, was mit folgender Steueranweisung (bzw. mit einem eigens dafür definierten Makro) erzielt werden kann:  
@@ -42,5 +42,8 @@ Folgende Steueranweisungen fügen einen Seitenumbruch zur nächsten linken oder 
     <td>Seitenumbruch zur nächsten rechten Seite innerhalb eines Textabschnitts</td>
 </tr> 
 </table>
+<br><br>
+Die Makrodatei **setze1** enthält die Satzroutinen für die beiden Dateien **seneca1.tf** und **seneca2.tf**, die im Wesentlichen den Beispielroutinen für Texte mit Apparaten im Tustep-Wiki entsprechen. Die Parameter und die Makrodefintionen für die Satzroutinen sind in den Dateien **setze_par.tf** und **setze_mak.tf** enthalten. Wie weiter unten noch erklärt wird, enthält die Parameterdatei **setze_par_s1.tf** eine Variable für die erste Seitenzahl s1, in die am Anfang der aktuell beabsichtigte Wert eingesetzt wird.  
 
+Die *Phase 1* benötigt in der Regel mehrere Satzgänge. Nach dem ersten Ausführen von **setze1** werden die 2. und die 3. Seite verglichen und die Seitenumbrüche mit den obigen Makros inhaltlich passend gesetzt. Dann wird **setze1** ein zweites Mal ausgeführt, das Resultat überprüft und es werden die Seitenumbrüche für die 4. und 5. Seite angebracht. Wieder wird **setze1** angewendet und so weiter bis zum Ende des Texts. Nach dem Setzen aller Seitenumbrüche sind **seneca1.tf** und **seneca2.tf** in der *Phase 2* bereit zur Montage mit **setze2**.
 
