@@ -74,4 +74,4 @@ Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe die Date
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1  -2 
  
-Diese s1 ist kein eigentlicher Parameter, sondern ein Stellvertreterzeichen, für noch einzusetzende aktelle erste Seitenzahl.
+Dieses s1 ist kein eigentlicher Parameter, sondern ein Stellvertreterzeichen, für noch einzusetzende aktelle erste Seitenzahl. Die Einsetzung geschieht wie folgt, indem die Datei `PARA0 = "setze_par_s1.tf"` mit OPEN geöffnet und mit CREATE eine leere Datei `PARA = "setze_par.tf"` erzeugt wird.
