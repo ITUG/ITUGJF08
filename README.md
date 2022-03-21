@@ -62,9 +62,9 @@ Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **
 Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will und dazu nur die Kapitelnamen und deren erste Seitenzahlen austauschen muss, kann so vorgegangen werden, wie in **setze1** und **setze2** exemplarisch ausgeführt. Man definiert den Wurzelnamen der Dateien mittels eine Parameters **root**. In unserem Fall beträgt `root = "seneca"`. Alle anderen Dateinamen werden dann mit der Funktion CONCAT zu TUSCRIPT-Variablen zusammengesetzt, die den Wurzelnamen enthalten. Diese werden mit DEFINE in TUSTEP-Variablen umgewandelt, damit sie so in die Satzroutinen eingesetzt werden können, zum Beispiel wie folgt für die Ausgangsdateien **seneca1.tf** und **seneca2.tf**: 
  
 `$$ QUELLE1 = CONCAT(root,"1.tf")` <br>
-`DEFINE QUELLE1` <br>
-`QUELLE2 = CONCAT(root,"2.tf")` <br>
-`DEFINE QUELLE2` <br>
+`$$ DEFINE QUELLE1` <br>
+`$$ QUELLE2 = CONCAT(root,"2.tf")` <br>
+`$$ DEFINE QUELLE2` <br>
  
 Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalten in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
   
@@ -74,6 +74,6 @@ Um die erste Seitenzahl nicht manuell in SEI einfügen zu müssen, habe ich die 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1  -2 
  
-Dieses &quot;s1&quot; stellt keinen eigentlichen Parameter dann, sondern ist ein Stellvertreterzeichen für die noch einzusetzende aktuelle erste Seitenzahl. Die Einsetzung geschieht wie folgt, indem die Datei `PARA0 = "setze_par_s1.tf"` mit OPEN geöffnet und mit CREATE eine leere Datei `PARA = "setze_par.tf"` erzeugt wird. Der Inhalt von `PARA0` wird in eine Datei text ausgelesen, die über einen LOOP satzweise nach den Vorkommen von &quot;s1&quot; durchsucht und im positiven Fall durch den aktuellen Wert, in unserem Beispiel 11, ersetzt wird. Das Resultat wird in der Parameterdatei `PARA` abgespeichert, die dann im Satzvorgang zur Anwendung kommt. 
+Dieses &quot;s1&quot; stellt keinen eigentlichen Parameter dann, sondern ist ein Stellvertreterzeichen für die noch einzusetzende aktuelle erste Seitenzahl. Die Einsetzung geschieht wie folgt, indem die Datei `$$ PARA0 = "setze_par_s1.tf"` mit OPEN geöffnet und mit CREATE eine leere Datei `$$ PARA = "setze_par.tf"` erzeugt wird. Der Inhalt von `PARA0` wird in eine Datei text ausgelesen, die über einen LOOP satzweise nach den Vorkommen von &quot;s1&quot; durchsucht und im positiven Fall durch den aktuellen Wert, in unserem Beispiel 11, ersetzt wird. Das Resultat wird in der Parameterdatei `PARA` abgespeichert, die dann im Satzvorgang zur Anwendung kommt. 
  
 In meiner Edition verwende ich für jedes Kapitel eine eigene TUE-Makrodatei, in der ich lediglich die Werte für **root** und **s1** und eventuell noch die Seitenanzahl festlegen muss. Natürlich könnte man auch eine Makrodatei mit Parametern definieren, doch dann müssten diese bei jedem Aufruf explizit angegeben werden. Ich finde die Verwendung von fixen Makrodateien praktischer. Am Schluss kann das fertige Buch mit #\*MONT zusammengesetzt werden.
