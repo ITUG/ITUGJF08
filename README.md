@@ -53,7 +53,7 @@ Die *Phase 1* benötigt in der Regel mehrere Satzgänge mit **setze1** mit #SATZ
 ### Phase 2: Zusammenfügen der beiden vorbereiteten Texte mit der TUE- bzw. Makrodatei &quot;setze2&quot;
 Der linksseitige Text **seneca1.tf** enthält auf der ersten Seite die Titelseite. Nach jedem manuell eingesetzten Seitenumbruch wurde in *Phase 1* eine Leerseite eingefügt. Die Leerseiten von **seneca1.tf** tragen somit ungerade Seitennummern. Dem rechtsseitigen Text **seneca2.tf** wurden wie oben angemerkt zwei Leerseiten vorangestellt. Auch bei diesem Text folgt jedem Seitenumbruch eine Leerseite, wodurch mit Ausnahme der ersten Seite die Leerseiten von **seneca2.tf** gerade Seitennummern aufweisen. 
   
-Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **seneca2.tf** einen getrennten Satzdurchgang durch. Die resultierenden Satzdateien **aus1** und **aus2** werden schließlich mit #\*MONT übereinandergelegt. Das Besondere an #\*MONT besteht darin, dass bis zu 1000 Satzdateien zusammenmontiert und damit auch komplexe Satzresultate erzielt werden können. Die Ausgabe erfolgt mit #\*PSAUS und bei Bedarf weiter mit #\*PS2PDF. Die Einzeltexte mit den fertig eingefügten Leerseiten und mit dem Resultat vis-à-vis im Buchformat 15.5 x 23.0 cm finden sich in den Dateien **ziel_seneca1.tf**, **ziel_seneca2.tf** und **ziel_seneca_bf.pdf**. 
+Die Makrodatei **setze2** führt zunächst mit den Dateien **seneca1.tf** und **seneca2.tf** einen getrennten Satzdurchgang durch. Die resultierenden Satzdateien aus1 und aus2 werden schließlich mit #\*MONT übereinandergelegt. Das Besondere an #\*MONT besteht darin, dass bis zu 1000 Satzdateien zusammenmontiert und damit auch komplexe Satzresultate erzielt werden können. Die Ausgabe erfolgt mit #\*PSAUS und bei Bedarf weiter mit #\*PS2PDF. Die Einzeltexte mit den fertig eingefügten Leerseiten und mit dem Resultat vis-à-vis im Buchformat 15.5 x 23.0 cm finden sich in den Dateien **ziel_seneca1.tf**, **ziel_seneca2.tf** und **ziel_seneca_bf.pdf**. 
  
 \[Bemerkung: In der ersten, im Jour-fixe vorgestellten Version von **setze2** erzeugte ich mit #\*PSAUS die Ghostscriptdateien **seneca1.ps** und **seneca2.ps**, aus denen ich mittels #\*PSAUSWAHL die einzelnen Seiten extrahierte und dann über eine Schleife mit #\*PSMONT zum Endresultat zusammensetzte. Dank dem Hinweis von Hannelore und Wilhelm Ott auf #\*MONT, das direkt mit den Satzdateien arbeitet, geht das Zusammensetzen viel schneller und eleganter.\]
 <br>
@@ -66,7 +66,7 @@ Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will
 `QUELLE2 = CONCAT(root,"2.tf")` <br>
 `DEFINE QUELLE2` <br>
  
-Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalt in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
+Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalten in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11  -2 
 
