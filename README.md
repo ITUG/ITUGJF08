@@ -66,7 +66,7 @@ Wenn man mehrere Kapitel eines Buchs mit ähnlichen Satzroutinen bearbeiten will
 `$$ QUELLE2 = CONCAT(root,"2.tf")` <br>
 `$$ DEFINE QUELLE2` <br>
  
-Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalten in **setze_par.tf**\) an erster Stelle aufgeführt werden, wie zum Beispiel hier die Seite 11: 
+Dasselbe gilt für die erste Seite s1 und die letzte Seite s998. So erwartet #\*PSAUS die Angabe von s1 und s998. Wie weiter bekannt, muss die erste Seite s1 auch im Parameter SEI von #SATZ \(hier enthalten in **setze_par.tf**\) an erster Stelle aufgeführt werden, zum Beispiel die Seite 11: 
   
 SEI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11  -2 
 
